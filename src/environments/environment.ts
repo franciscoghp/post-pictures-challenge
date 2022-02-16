@@ -5,9 +5,14 @@
 export const environment = {
   production: false,
   appVersion: 'v726demo1',
-  USERDATA_KEY: 'authf649fc9a5f55',
-  isMockEnabled: true,
-  apiUrl: 'https://your-domain.com/api'
+  firebase: {
+    apiKey: "AIzaSyCyBKo4yT-41z6_GmiSAT0ew9S7zu1l9UI",
+    authDomain: "post-pictures-cbb2a.firebaseapp.com",
+    projectId: "post-pictures-cbb2a",
+    storageBucket: "post-pictures-cbb2a.appspot.com",
+    messagingSenderId: "834719175743",
+    appId: "1:834719175743:web:87606647e6d13ca683d48a"
+  }
 };
 
 /*

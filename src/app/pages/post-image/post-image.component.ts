@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ImagesService } from 'src/app/utils/core/services/images.service';
 
 @Component({
   selector: 'app-post-image',
@@ -9,8 +10,9 @@ export class PostImageComponent implements AfterViewInit{
 
   WIDTH = 640;
   HEIGHT = 480;
+  loading: boolean;
 
-  constructor() {}
+  constructor( private imageService: ImagesService ) { }
 
   @ViewChild("video")
   public video: ElementRef;
@@ -18,12 +20,26 @@ export class PostImageComponent implements AfterViewInit{
   @ViewChild("canvas")
   public canvas: ElementRef;
 
-  captures: string[] = [];
+  captures:any = [];
   error: any;
   isCaptured: boolean;
 
+  getImages(){
+    this.loading = true;
+    console.log('pa ve pa dentro', this.loading)
+    this.imageService.getImages().subscribe( (res:any) =>{
+      this.loading = false;
+      this.captures = res
+      console.log(this.captures.length , this.loading)
+    }, (error: any) =>{
+      this.loading = false;
+      console.log(error)
+    })
+  }
+
   async ngAfterViewInit() {
     await this.setupDevices();
+    this.getImages();
   }
 
   async setupDevices() {
@@ -48,19 +64,19 @@ export class PostImageComponent implements AfterViewInit{
 
   capture() {
     this.drawImageToCanvas(this.video.nativeElement);
-    this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
+    const newImage = this.canvas.nativeElement.toDataURL("image/png");
+    
     this.isCaptured = true;
+    this.imageService.postImage(newImage).then( (res: any) =>{
+      this.imageService.messageSuccess('Picture added succesfully')
+    }, (error : any) =>{
+      console.log(error)
+      this.imageService.messageError(error)
+    });
   }
 
   removeCurrent() {
     this.isCaptured = false;
-  }
-
-  setPhoto(idx: number) {
-    this.isCaptured = true;
-    var image = new Image();
-    image.src = this.captures[idx];
-    this.drawImageToCanvas(image);
   }
 
   drawImageToCanvas(image: any) {

@@ -14,9 +14,9 @@ import {
   NavigationEnd,
   NavigationCancel,
 } from '@angular/router';
-import { LayoutService } from '../../../../utils/core';
 
 import { Subscription, Observable, BehaviorSubject } from 'rxjs';
+import { LayoutService } from 'src/app/utils/core/services/layout.service';
 
 @Component({
   selector: 'app-header',

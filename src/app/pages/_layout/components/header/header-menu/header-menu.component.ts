@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { LayoutService } from '../../../../../utils/core';
+import { LayoutService } from 'src/app/utils/core/services/layout.service';
 
 function getCurrentURL(location) {
   return location.split(/[?#]/)[0];

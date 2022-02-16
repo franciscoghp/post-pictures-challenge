@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { LayoutService } from '../../../../utils/core';
+import { LayoutService } from 'src/app/utils/core/services/layout.service';
 
 @Component({
   selector: 'app-header-mobile',

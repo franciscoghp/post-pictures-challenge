@@ -131,6 +131,10 @@
               "devServerTarget": "demo1-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

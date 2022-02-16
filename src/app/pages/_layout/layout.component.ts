@@ -5,7 +5,8 @@ import {
   ElementRef,
   AfterViewInit,
 } from '@angular/core';
-import { LayoutService, LayoutInitService } from '../../utils/core';
+import { LayoutInitService } from 'src/app/utils/core/services/layout-init.service';
+import { LayoutService } from 'src/app/utils/core/services/layout.service';
 
 @Component({
   selector: 'app-layout',

@@ -93,7 +93,6 @@
       >
         <a
           class="menu-link menu-toggle"
-          href="/material"
           routerLinkActive="active"
         >
           <span
@@ -102,6 +101,11 @@
             class="svg-icon menu-icon"
           ></span>
           <span class="menu-text">Show</span>
+          <div class="text-center" *ngIf="loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
           <i class="menu-arrow"></i>
         </a>
         <div class="menu-submenu">
@@ -115,191 +119,21 @@
 
             <!-- Form Controls -->
             <!-- begin::2 Level -->
-            <li
-              class="menu-item menu-item-submenu"
+            <li *ngFor="let image of images"
+              class="menu-item menu-item-submenu my-2"
               aria-haspopup="true"
               data-menu-toggle="hover"
-              routerLinkActive="menu-item-open"
             >
               <a
                 class="menu-link menu-toggle"
-                href="/material/form-controls"
                 routerLinkActive="active"
               >
                 <i class="menu-bullet menu-bullet-dot">
                   <span></span>
                 </i>
-                <span class="menu-text">Form Controls</span>
-                <i class="menu-arrow"></i>
+                <!-- <span class="menu-text">Form Controls</span> -->
+                <img src="{{image.data}}" width="60">
               </a>
-              <div class="menu-submenu">
-                <i class="menu-arrow"></i>
-                <ul class="menu-subnav">
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    aria-haspopup="true"
-                    routerLinkActive="menu-item-active"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/autocomplete"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Auto Complete</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    aria-haspopup="true"
-                    routerLinkActive="menu-item-active"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/checkbox"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Checkbox</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    aria-haspopup="true"
-                    routerLinkActive="menu-item-active"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/radiobutton"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Radio Button</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/datepicker"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Datepicker</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="material/form-controls/formfield"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Form Field</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/input"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Input</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/select"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Select</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/slider"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Slider</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                  <!-- begin::3 Level -->
-                  <li
-                    class="menu-item"
-                    routerLinkActive="menu-item-active"
-                    aria-haspopup="true"
-                  >
-                    <a
-                      class="menu-link"
-                      routerLink="/material/form-controls/slidertoggle"
-                      routerLinkActive="active"
-                    >
-                      <i class="menu-bullet menu-bullet-dot">
-                        <span></span>
-                      </i>
-                      <span class="menu-text">Slider Toggle</span>
-                    </a>
-                  </li>
-                  <!-- end::3 Level -->
-                </ul>
-              </div>
             </li>
             <!-- end::2 Level -->
           </ul>

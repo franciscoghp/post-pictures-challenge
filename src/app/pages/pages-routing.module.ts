@@ -15,7 +15,7 @@ const routes: Routes = [
       {
         path: 'post-by-modal',
         loadChildren: () =>
-          import('./builder/post-by-modal.module').then((m) => m.PostByModalModule),
+          import('./post-by-modal/post-by-modal.module').then((m) => m.PostByModalModule),
       },
       {
         path: '',

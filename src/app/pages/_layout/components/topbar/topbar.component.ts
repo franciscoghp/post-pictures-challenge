@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LayoutService } from '../../../../utils/core';
 import KTLayoutQuickSearch from '../../../../../assets/js/layout/extended/quick-search';
 import KTLayoutQuickNotifications from '../../../../../assets/js/layout/extended/quick-notifications';
 import KTLayoutQuickActions from '../../../../../assets/js/layout/extended/quick-actions';
@@ -9,6 +8,7 @@ import KTLayoutQuickPanel from '../../../../../assets/js/layout/extended/quick-p
 import KTLayoutQuickUser from '../../../../../assets/js/layout/extended/quick-user';
 import KTLayoutHeaderTopbar from '../../../../../assets/js/layout/base/header-topbar';
 import { KTUtil } from '../../../../../assets/js/components/util';
+import { LayoutService } from 'src/app/utils/core/services/layout.service';
 
 @Component({
   selector: 'app-topbar',

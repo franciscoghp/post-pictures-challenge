@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "post-pictures-cbb2a": {
+      "hosting": {
+        "demo1-app": [
+          "post-pictures-cbb2a"
+        ]
+      }
+    }
+  }
+}

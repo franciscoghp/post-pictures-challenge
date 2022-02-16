@@ -30,11 +30,15 @@
             </div>
         
             <ul class="list-unstyled">
-                <li *ngFor="let src of captures; let idx = index" (click)="setPhoto(idx)">
-                    <img [src]="src" height="50" />
+                <li *ngFor="let src of captures; let idx = index">
+                    <img [src]="src.data" height="50" />
                 </li>
             </ul>
-
+            <div class="text-center" *ngIf="loading">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
       </div>
     </div>
   </div>
