@@ -14,7 +14,7 @@ import {
   NavigationEnd,
   NavigationCancel,
 } from '@angular/router';
-import { LayoutService } from '../../../../_metronic/core';
+import { LayoutService } from '../../../../utils/core';
 
 import { Subscription, Observable, BehaviorSubject } from 'rxjs';
 

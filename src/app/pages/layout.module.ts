@@ -14,9 +14,6 @@ import { FooterComponent } from './_layout/components/footer/footer.component';
 import { HeaderComponent } from './_layout/components/header/header.component';
 import { HeaderMenuComponent } from './_layout/components/header/header-menu/header-menu.component';
 import { TopbarComponent } from './_layout/components/topbar/topbar.component';
-import { ExtrasModule } from '../_metronic/partials/layout/extras/extras.module';
-import { CoreModule } from '../_metronic/core';
-import { SubheaderModule } from '../_metronic/partials/layout/subheader/subheader.module';
 
 @NgModule({
   declarations: [
@@ -33,11 +30,8 @@ import { SubheaderModule } from '../_metronic/partials/layout/subheader/subheade
     CommonModule,
     PagesRoutingModule,
     InlineSVGModule,
-    ExtrasModule,
     NgbDropdownModule,
     NgbProgressbarModule,
-    CoreModule,
-    SubheaderModule,
   ],
 })
 export class LayoutModule { }

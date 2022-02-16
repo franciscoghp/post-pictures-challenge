@@ -13,7 +13,7 @@ const routes: Routes = [
           import('./post-image/post-image.module').then((m) => m.PostImageModule),
       },
       {
-        path: 'builder',
+        path: 'post-by-modal',
         loadChildren: () =>
           import('./builder/post-by-modal.module').then((m) => m.PostByModalModule),
       },

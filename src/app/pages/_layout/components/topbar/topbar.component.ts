@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LayoutService } from '../../../../_metronic/core';
+import { LayoutService } from '../../../../utils/core';
 import KTLayoutQuickSearch from '../../../../../assets/js/layout/extended/quick-search';
 import KTLayoutQuickNotifications from '../../../../../assets/js/layout/extended/quick-notifications';
 import KTLayoutQuickActions from '../../../../../assets/js/layout/extended/quick-actions';

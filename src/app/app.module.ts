@@ -11,16 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Highlight JS
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { SplashScreenModule } from './_metronic/partials/layout/splash-screen/splash-screen.module';
-
+import { HighlightModule } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SplashScreenModule,
     TranslateModule.forRoot(),
     HttpClientModule,
     HighlightModule,
